@@ -68,8 +68,8 @@ for (let i = 0; i < boite.length; i++) {
         let clickedColor = this.style.background;
         //comparer la couleur à la couleur choisie
         if (clickedColor === pickedColor) {
-            messageDisplay.textContent = "Félicitation!";
-            resetButton.textContent = "Rejouer ?";
+            messageDisplay.textContent = "Félicitation";
+            resetButton.textContent = "Rejouer";
             changeColors(clickedColor);
             h2.style.background = clickedColor;
         } else {
