@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body class="text-uppercase text-light red lighten-4">
+    <h2 class="py-5 text-light center-align z-depth-5" style="line-height: 1.5; background-color: teal;">
+        GUESS THE COLOR
+        <br>
+        <span id="codeCouleur" style="font-size: 150%;">RGB</span>
+        <br>
+        Choisi la bonne couleur
+    </h2>
+    
+    <div id="zoneBouton" class="py-3 bg-white center-align card-panel">
+        <button id="reset" class="btn z-depth-5"> Nouvelle Couleur</button>
+        <span id="message" class="text-dark d-inline-block w-25 z-depth-5"></span>
+        <button id="btnFacile" class="btn green btn z-depth-5">Facile</button>
+        <button class="selected btn red  z-depth-5" id="btnDur">Difficile</button>
+    </div>
+    
+    <div id="container" style="margin: 20px auto; max-width: 600px;">
+        <div class="boite z-depth-5 pulse"></div>
+        <div class="boite z-depth-5 pulse"></div>
+        <div class="boite z-depth-5 pulse"></div>
+        <div class="boite z-depth-5 pulse"></div>
+        <div class="boite z-depth-5 pulse"></div>
+        <div class="boite z-depth-5 pulse"></div>
+    </div>
+
+    </div>
+<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
