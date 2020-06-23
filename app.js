@@ -8,37 +8,7 @@ let h2 = document.querySelector("h2");
 let resetButton = document.querySelector("#reset");
 let btnFacile = document.querySelector("#btnFacile");
 let btnDur = document.querySelector("#btnDur");
-
-
-btnFacile.addEventListener("click", function () {
-    btnDur.classList.remove("selected");
-    btnFacile.classList.add("selected");
-    numBoites = 3;
-    colors = generateRandomColors(numBoites);
-    pickedColor = pickColor();
-    codeCouleur.textContent = pickedColor;
-    for (let i = 0; i < boite.length; i++) {
-        if (colors[i]) {
-            boite[i].style.background = colors[i];
-        } else {
-            boite[i].style.display = "none";
-        }
-    }
-});
-
-btnDur.addEventListener("click", function () {
-    btnFacile.classList.remove("selected");
-    btnDur.classList.add("selected");
-    numBoites = 6;
-    colors = generateRandomColors(numBoites);
-    pickedColor = pickColor();
-    codeCouleur.textContent = pickedColor;
-    for (let i = 0; i < boite.length; i++) {
-        boite[i].style.background = colors[i];
-        boite[i].style.display = "block";
-    }
-});
-
+//bouton de reset
 resetButton.addEventListener("click", function () {
     //générer de nouvelles couleur
     colors = generateRandomColors(numBoites);
@@ -56,6 +26,38 @@ resetButton.addEventListener("click", function () {
 })
 
 codeCouleur.textContent = pickedColor;
+
+//bouton facile
+btnFacile.addEventListener("click", function () {
+    btnDur.classList.remove("selected");
+    btnFacile.classList.add("selected");
+    numBoites = 3;
+    colors = generateRandomColors(numBoites);
+    pickedColor = pickColor();
+    codeCouleur.textContent = pickedColor;
+    for (let i = 0; i < boite.length; i++) {
+        if (colors[i]) {
+            boite[i].style.background = colors[i];
+        } else {
+            boite[i].style.display = "none";
+        }
+    }
+});
+
+//bouton difficile
+btnDur.addEventListener("click", function () {
+    btnFacile.classList.remove("selected");
+    btnDur.classList.add("selected");
+    numBoites = 6;
+    colors = generateRandomColors(numBoites);
+    pickedColor = pickColor();
+    codeCouleur.textContent = pickedColor;
+    for (let i = 0; i < boite.length; i++) {
+        boite[i].style.background = colors[i];
+        boite[i].style.display = "block";
+    }
+});
+
 
 for (let i = 0; i < boite.length; i++) {
     //ajouter des couleurs initiales aux boites
